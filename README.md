@@ -1,2 +1,0 @@
-# refactored-fortnight
-Landing page
