@@ -18,3 +18,7 @@ npm run build
 This site is a static Vite React app intended for GitHub Pages. It uses email links for Electric Jellyfish beta updates, future Pro waitlist interest, and support contact.
 
 It does not implement checkout, accounts, licensing, downloads, forms, a waitlist database, or private customer data handling.
+
+## Deployment
+
+GitHub Pages is currently configured to publish the `production` branch for `aquariumaudiolabs.com`. Build the site from `main`, then publish the contents of `dist/` to `production` while preserving the `CNAME` file.
