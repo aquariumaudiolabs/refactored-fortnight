@@ -31,8 +31,13 @@ const proTeasers = [
 const socialLinks = [
   {
     label: 'Instagram',
-    handle: '@aquariumaudiolabs',
-    href: 'https://www.instagram.com/aquariumaudiolabs/',
+    handle: '@aquarium.audiolabs',
+    href: 'https://www.instagram.com/aquarium.audiolabs/',
+  },
+  {
+    label: 'Facebook',
+    handle: 'Aquarium Audio Labs',
+    href: 'https://www.facebook.com/profile.php?id=61590404774856',
   },
   {
     label: 'YouTube',
@@ -59,7 +64,9 @@ function App() {
 
         <header className="nav" aria-label="Primary navigation">
           <a className="brand" href="#top" aria-label="Aquarium Audio Labs home">
-            <span className="brand__mark">AAL</span>
+            <span className="brand__mark" aria-hidden="true">
+              <img src="./assets/social/aquarium-profile-avatar-320.png" alt="" />
+            </span>
             <span>Aquarium Audio Labs</span>
           </a>
           <nav>
