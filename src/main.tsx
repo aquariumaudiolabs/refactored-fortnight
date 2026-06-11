@@ -45,6 +45,11 @@ const socialLinks = [
     href: 'https://www.youtube.com/@AquariumAudioLabs',
   },
   {
+    label: 'TikTok',
+    handle: '@aquariumaudiolabs',
+    href: 'https://www.tiktok.com/@aquariumaudiolabs',
+  },
+  {
     label: 'Reddit',
     handle: 'u/aquariumaudiolabs',
     href: 'https://www.reddit.com/user/aquariumaudiolabs/',
