@@ -9,8 +9,10 @@ const proHref =
 const supportHref = 'mailto:support@aquariumaudiolabs.com';
 
 const navItems = [
+  { label: 'Coming Soon', href: '#launch-kit' },
   { label: 'Plugins', href: '#plugins' },
   { label: 'Beta', href: '#beta' },
+  { label: 'Worlds', href: '#brand-worlds' },
   { label: 'Pro Waitlist', href: '#pro-waitlist' },
   { label: 'Socials', href: '#socials' },
 ];
@@ -28,11 +30,35 @@ const proTeasers = [
   'Early interest helps shape what the Pro version becomes',
 ];
 
+const launchSlots = [
+  {
+    label: 'First listen',
+    title: 'Sound clips are surfacing soon',
+    detail: 'Short before-and-after moments will show how Electric Jellyfish bends tone.',
+  },
+  {
+    label: 'Voltage check',
+    title: 'Beta notes are warming up',
+    detail: 'Release notes, supported formats, and download details will appear when the build is ready.',
+  },
+  {
+    label: 'Tank cam',
+    title: 'Interface previews are in motion',
+    detail: 'Small looks at the plugin, glowing controls, and underwater motion are next in the current.',
+  },
+];
+
+const brandWorlds = [
+  'Creative tools with motion, color, and a little electricity under the glass',
+  'Fast controls that feel playful without slowing down a session',
+  'A brand world built around texture, tone, and tactile musical decisions',
+];
+
 const socialLinks = [
   {
     label: 'Instagram',
-    handle: '@aquarium.audiolabs',
-    href: 'https://www.instagram.com/aquarium.audiolabs/',
+    handle: '@aquariumaudiolabs',
+    href: 'https://www.instagram.com/aquariumaudiolabs/',
   },
   {
     label: 'Facebook',
@@ -101,6 +127,31 @@ function App() {
         </div>
       </section>
 
+      <section
+        className="section section--launch light-band"
+        id="launch-kit"
+        aria-labelledby="launch-kit-title"
+      >
+        <div className="section__header">
+          <p className="eyebrow">Coming Soon</p>
+          <h2 id="launch-kit-title">The first signals are swimming up.</h2>
+          <p>
+            Electric Jellyfish is getting its public demos, release notes, and beta download details
+            ready. Until then, this is the launch current to follow.
+          </p>
+        </div>
+
+        <div className="launch-grid">
+          {launchSlots.map((slot) => (
+            <article className="launch-card" key={slot.title}>
+              <span>{slot.label}</span>
+              <h3>{slot.title}</h3>
+              <p>{slot.detail}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
       <section className="section section--plugins current-band" id="plugins" aria-labelledby="plugins-title">
         <div className="section__header">
           <p className="eyebrow">Plugins</p>
@@ -142,21 +193,68 @@ function App() {
           <p className="eyebrow">Beta</p>
           <h2 id="beta-title">Follow the first public ripple.</h2>
           <p>
-            Electric Jellyfish beta build work is underway. Send an email to get updates as the
-            public download, release notes, and support details come together.
+            Electric Jellyfish beta work is underway. Send an email to get updates as the public
+            download, release notes, and support details come together.
           </p>
         </div>
         <div className="callout">
           <span className="callout__label">Email updates</span>
-          <h3>Updates go through email today.</h3>
+          <h3>Updates are email-first for now.</h3>
           <p>
-            Beta interest is handled by email while the public release is prepared. No account,
-            checkout, or waitlist form is live on this site.
+            Beta interest is handled by email while the release is prepared. No account, checkout,
+            or signup form is live on this site.
           </p>
           <a className="button button--dark button--glow" href={betaHref}>
             Get beta updates
           </a>
         </div>
+      </section>
+
+      <section
+        className="section section--free-beta current-band"
+        id="free-beta-plugin"
+        aria-labelledby="free-beta-title"
+      >
+        <div className="free-beta-panel">
+          <div>
+            <p className="eyebrow">Free Beta Plugin</p>
+            <h2 id="free-beta-title">A tiny wave-rider may join the reef.</h2>
+            <p>
+              A playful free experiment is drifting around the tank: a small visual companion for
+              channel motion. No promise yet, just a little signal from the fun side of the lab.
+            </p>
+            <a className="button button--primary button--glow" href={betaHref}>
+              Get beta updates
+            </a>
+          </div>
+          <div className="wave-rider" aria-hidden="true">
+            <span className="wave-rider__fish" />
+            <span className="wave-rider__line wave-rider__line--one" />
+            <span className="wave-rider__line wave-rider__line--two" />
+            <span className="wave-rider__line wave-rider__line--three" />
+          </div>
+        </div>
+      </section>
+
+      <section
+        className="section section--brand light-band"
+        id="brand-worlds"
+        aria-labelledby="brand-worlds-title"
+      >
+        <div className="section__header">
+          <p className="eyebrow">Worlds</p>
+          <h2 id="brand-worlds-title">A little nature. A little voltage.</h2>
+          <p>
+            Aquarium Audio Labs is building creative tools that feel alive in the hand: vivid,
+            musical, tactile, and just strange enough to make a session light up.
+          </p>
+        </div>
+
+        <ul className="brand-list" aria-label="Brand world themes">
+          {brandWorlds.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
       </section>
 
       <section
@@ -168,8 +266,8 @@ function App() {
           <p className="eyebrow">Pro Waitlist</p>
           <h2 id="pro-title">More voltage is planned.</h2>
           <p>
-            Electric Jellyfish Pro is a future version, not a product for sale today. Join the
-            waitlist to signal interest in a deeper, more flexible creative tool.
+            Electric Jellyfish Pro is planned as a deeper version for people who want more control,
+            more color, and more room to push sounds around. Join the waitlist to shape what comes next.
           </p>
         </div>
 
@@ -183,7 +281,7 @@ function App() {
         </div>
 
         <div className="pro-strip">
-          <p>No checkout, account, activation, license system, or Pro purchase flow is live.</p>
+          <p>Pro is not for sale yet; there is no checkout, account, activation, or license flow live.</p>
           <a className="button button--primary button--glow" href={proHref}>
             Join the Pro waitlist
           </a>
@@ -225,11 +323,16 @@ function App() {
 
       <footer className="footer">
         <a className="footer__brand" href="#top">
-          Aquarium Audio Labs
+          <span className="footer__mark" aria-hidden="true">
+            <img src="./assets/social/aquarium-profile-avatar-320.png" alt="" />
+          </span>
+          <span>Aquarium Audio Labs</span>
         </a>
         <nav aria-label="Footer navigation">
+          <a href="#launch-kit">Coming Soon</a>
           <a href="#plugins">Plugins</a>
           <a href="#beta">Beta</a>
+          <a href="#brand-worlds">Worlds</a>
           <a href="#pro-waitlist">Pro Waitlist</a>
           <a href="#socials">Socials</a>
           <a href={supportHref}>Support</a>
