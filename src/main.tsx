@@ -24,6 +24,14 @@ const pluginHighlights = [
   'Beta release is in preparation, with updates shared by email',
 ];
 
+const pluginLineup = [
+  {
+    label: 'Free fun utility',
+    name: 'Beta Fish',
+    detail: 'A tiny visual companion with a little channel motion, still getting its fins in order.',
+  },
+];
+
 const proTeasers = [
   'Deeper tone shaping for more detailed current control',
   'Expanded creative sound design ideas for future sessions',
@@ -157,9 +165,19 @@ function App() {
           <p className="eyebrow">Plugins</p>
           <h2 id="plugins-title">Electric Jellyfish leads the tank.</h2>
           <p>
-            A saturation plugin in preparation for musicians who want voltage, movement, and wet
-            neon character without stopping the session.
+            Electric Jellyfish is first up, with a few smaller creatures moving around behind the
+            glass. Downloads are still being prepared.
           </p>
+        </div>
+
+        <div className="lineup-grid" aria-label="More Aquarium plugins in progress">
+          {pluginLineup.map((plugin) => (
+            <article className="lineup-card" key={plugin.name}>
+              <span>{plugin.label}</span>
+              <h3>{plugin.name}</h3>
+              <p>{plugin.detail}</p>
+            </article>
+          ))}
         </div>
 
         <article className="plugin-card">
@@ -218,10 +236,10 @@ function App() {
         <div className="free-beta-panel">
           <div>
             <p className="eyebrow">Free Beta Plugin</p>
-            <h2 id="free-beta-title">A tiny wave-rider may join the reef.</h2>
+            <h2 id="free-beta-title">A tiny wave-rider is in the tank.</h2>
             <p>
-              A playful free experiment is drifting around the tank: a small visual companion for
-              channel motion. No promise yet, just a little signal from the fun side of the lab.
+              Beta Fish is a tiny visual companion for channel motion: playful, bright, and easy to
+              keep in the corner of a session.
             </p>
             <a className="button button--primary button--glow" href={betaHref}>
               Get beta updates

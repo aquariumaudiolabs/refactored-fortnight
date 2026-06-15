@@ -435,6 +435,38 @@ p {
   font-size: 1.02rem;
 }
 
+.lineup-grid {
+  margin: -10px 0 18px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  max-width: 720px;
+  gap: 14px;
+}
+
+.lineup-card {
+  min-height: 0;
+  padding: 22px;
+  border: 1px solid rgba(164, 230, 214, 0.14);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(126, 232, 215, 0.08), rgba(255, 139, 112, 0.055)),
+    rgba(255, 255, 255, 0.04);
+}
+
+.lineup-card span {
+  display: inline-flex;
+  margin-bottom: 10px;
+  color: rgba(126, 232, 215, 0.72);
+  font-size: 0.78rem;
+  font-weight: 780;
+  text-transform: uppercase;
+}
+
+.lineup-card p {
+  margin-bottom: 0;
+  color: rgba(244, 251, 248, 0.76);
+}
+
 .section--beta,
 .section--socials {
   display: grid;
@@ -834,6 +866,7 @@ p {
   .section--beta,
   .section--socials,
   .launch-grid,
+  .lineup-grid,
   .brand-list,
   .pro-grid {
     grid-template-columns: 1fr;
@@ -878,6 +911,7 @@ p {
   .pro-card,
   .pro-strip,
   .launch-card,
+  .lineup-card,
   .social-card {
     padding: 20px;
   }
